@@ -1,4 +1,5 @@
 ---
+import Navigation from '../components/Navigation.astro';
 import '../styles/global.css';
 
 const pageTitle = 'About Me';
@@ -25,9 +26,7 @@ const skills = ['Javascript', 'Svelte', 'Astro', 'React'];
     </style>
   </head>
   <body>
-    <a href='/'>Home</a>
-    <a href='/about/'>About</a>
-    <a href='/blog/'>Blog</a>
+    <Navigation />
     <h1>{pageTitle}</h1>
     <p>This is a paragraph about this Astro website.</p>
     <ul>
