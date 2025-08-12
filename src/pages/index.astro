@@ -1,5 +1,8 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import '../styles/global.css';
 
+const homeTitle = 'My Astro Blog';
 ---
 
 <html lang='en'>
@@ -11,9 +14,7 @@
     <title>Astro</title>
   </head>
   <body>
-    <a href='/'>Home</a>
-    <a href='/about/'>About</a>
-    <a href='/blog/'>Blog</a>
-    <h1>My Atro Site</h1>
+    <Navigation />
+    <h1>{homeTitle}</h1>
   </body>
 </html>

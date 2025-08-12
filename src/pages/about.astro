@@ -1,5 +1,8 @@
 ---
+import '../styles/global.css';
 
+const pageTitle = 'About Me';
+const skills = ['Javascript', 'Svelte', 'Astro', 'React'];
 ---
 
 <html lang='en'>
@@ -9,12 +12,26 @@
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
     <title>About Page</title>
+
+    <style>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .skill {
+        color: green;
+        font-size: 4rem;
+      }
+    </style>
   </head>
   <body>
     <a href='/'>Home</a>
     <a href='/about/'>About</a>
     <a href='/blog/'>Blog</a>
-    <h1>About this Site</h1>
+    <h1>{pageTitle}</h1>
     <p>This is a paragraph about this Astro website.</p>
+    <ul>
+      {skills.map((skill) => <li class='skill'>{skill}</li>)}
+    </ul>
   </body>
 </html>
